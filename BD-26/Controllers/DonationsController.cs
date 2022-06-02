@@ -7,13 +7,13 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using BD_26.Models;
-
+ //Code for Dontaion
 namespace BD_26.Controllers
 {
     public class DonationsController : Controller
     {
         private DBModels db = new DBModels();
-
+    
         // GET: Donations
         public ActionResult Index(string sortOrder)
         {
