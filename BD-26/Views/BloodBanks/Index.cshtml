@@ -1,0 +1,64 @@
+﻿@model IEnumerable<BD_26.Models.BloodBank>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Staff_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.bank_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bank_address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bank_phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bank_email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Stock.Stock_name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.bank_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bank_address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bank_phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bank_email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stock.Stock_name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.bank_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.bank_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.bank_id })
+        </td>
+    </tr>
+}
+
+</table>

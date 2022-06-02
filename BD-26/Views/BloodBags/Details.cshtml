@@ -1,0 +1,67 @@
+﻿@model BD_26.Models.BloodBag
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/Staff_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BloodBag</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.bloodtype)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bloodtype)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BloodBag_Donation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BloodBag_Donation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BloodBag_Expiration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BloodBag_Expiration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BloodBank.bank_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BloodBank.bank_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Donor.Fname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Donor.Fname)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BloodBag_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

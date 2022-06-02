@@ -1,0 +1,84 @@
+﻿@model BD_26.Models.Donation
+@{
+    ViewBag.Title = "Create_ar";
+    Layout = "~/Views/Shared/User_Layout_ar.cshtml";
+}
+
+
+
+
+<!----------------------------------------------->
+<div class="container" style="background: white">
+    <div class="request-details">
+
+        <nav class="pt-4" aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-edit">
+                <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+                <li class="breadcrumb-item"><a href="index.html">طلبات التبرع</a></li>
+                <li class="breadcrumb-item active" aria-current="page">طلبات التبرع</li>
+            </ol>
+        </nav>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <!-- Start Requests -->
+
+            <div class="request-box">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">SSN</span>
+                            </div>
+                            @Html.DropDownList("Donor_Ssn", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Donor_Ssn, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Blood Type</span>
+                            </div>
+                            @Html.EditorFor(model => model.bloodtype, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.bloodtype, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Last Donation Date</span>
+                            </div>
+                            @Html.EditorFor(model => model.LastDonationDate, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.LastDonationDate, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div class="location border">
+                    <div id='storemapper' style='width:100%;'>
+                        <p>Store Locator is loading from <a href='https://www.storemapper.co'>Storemapper</a>...</p>
+                    </div>
+                </div>
+                <div class="mx-auto">
+                    <button type="submit" class="btn details-btn">Confirm</button>
+                </div>
+
+            </div>
+
+        }
+    </div>
+</div>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+<script data-storemapper-start='2022,05,27'
+        data-storemapper-id='15956'>
+    (function () {
+        var script = document.createElement('script');
+        script.type = 'text/javascript'; script.async = true;
+        script.src = 'https://www.storemapper.co/js/widget-3.min.js';
+        var entry = document.getElementsByTagName('script')[0];
+        entry.parentNode.insertBefore(script, entry);
+    }
+        ());
+</script>

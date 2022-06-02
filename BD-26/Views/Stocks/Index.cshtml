@@ -1,0 +1,82 @@
+﻿@model IEnumerable<BD_26.Models.Stock>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Staff_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Stock_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.A_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.A_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.B_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.B_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AB_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AB_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.O_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.A_2)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stock_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.A_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.A_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.B_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.B_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AB_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AB_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.O_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.A_2)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Stock_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Stock_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Stock_Id })
+        </td>
+    </tr>
+}
+
+</table>

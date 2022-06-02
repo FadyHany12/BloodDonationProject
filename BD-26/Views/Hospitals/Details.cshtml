@@ -1,0 +1,59 @@
+﻿@model BD_26.Models.Hospital
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/Hospital_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Hospital</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Hospital_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hospital_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hospital_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hospital_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hospital_phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hospital_phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hospital_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hospital_email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Hospital_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

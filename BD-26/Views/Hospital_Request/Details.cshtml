@@ -1,0 +1,67 @@
+﻿@model BD_26.Models.Hospital_Request
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/Staff_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Hospital_Request</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.commissary_ssn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.commissary_ssn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.commissary_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.commissary_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bloodtype)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bloodtype)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.permission_path)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.permission_path)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hospital.Hospital_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hospital.Hospital_name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.permission_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

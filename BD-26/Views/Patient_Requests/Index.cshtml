@@ -1,0 +1,70 @@
+﻿@model IEnumerable<BD_26.Models.Patient_Requests>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Staff_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@using (Html.BeginForm())
+{
+
+    <p>
+        Find by name: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p>
+
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Patient_Ssn)
+        </th>
+        <th>
+            @Html.ActionLink("Patient Name", "Index", new { sortOrder = ViewBag.NameSortParm })
+        </th>
+        <th>
+
+            @Html.ActionLink("Blood Type", "Index", new { sortOrder = ViewBag.NameSortParm1 })
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.permission_path)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Patient_Ssn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Patient_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bloodtype)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.permission_path)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.permission_ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.permission_ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.permission_ID })
+            </td>
+        </tr>
+    }
+
+</table>

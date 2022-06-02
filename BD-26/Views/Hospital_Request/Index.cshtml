@@ -1,0 +1,64 @@
+﻿@model IEnumerable<BD_26.Models.Hospital_Request>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Staff_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.commissary_ssn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.commissary_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bloodtype)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.permission_path)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hospital.Hospital_name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.commissary_ssn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.commissary_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bloodtype)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.permission_path)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hospital.Hospital_name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.permission_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.permission_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.permission_ID })
+        </td>
+    </tr>
+}
+
+</table>

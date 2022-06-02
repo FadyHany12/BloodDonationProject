@@ -1,0 +1,46 @@
+﻿@model IEnumerable<BD_26.Models.Donation>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/User_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.bloodtype)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastDonationDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Donor.Fname)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.bloodtype)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastDonationDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Donor.Fname)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Donation_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Donation_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Donation_id })
+        </td>
+    </tr>
+}
+
+</table>

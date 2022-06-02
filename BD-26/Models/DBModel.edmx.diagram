@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="095f9fda674e4bf1996893e96e2b01db" Name="Diagram1">
+        <EntityTypeShape EntityType="BloodDonation2Model.BloodBag" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BloodDonation2Model.BloodBank" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BloodDonation2Model.Donation" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BloodDonation2Model.Donor" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BloodDonation2Model.Hospital" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BloodDonation2Model.Hospital_Request" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BloodDonation2Model.Patient_Requests" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BloodDonation2Model.Staff" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BloodDonation2Model.Stock" Width="1.5" PointX="1.5" PointY="11.25" IsExpanded="true" />
+        <AssociationConnector Association="BloodDonation2Model.FK__BloodBag__bank_i__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="BloodDonation2Model.FK__BloodBag__DSsn__44CA3770" ManuallyRouted="false" />
+        <AssociationConnector Association="BloodDonation2Model.FK__BloodBank__Stock__18EBB532" ManuallyRouted="false" />
+        <AssociationConnector Association="BloodDonation2Model.FK__Donations__Donor__47A6A41B" ManuallyRouted="false" />
+        <AssociationConnector Association="BloodDonation2Model.FK__Hospital___Hospi__4A8310C6" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

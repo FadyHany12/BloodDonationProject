@@ -1,0 +1,67 @@
+﻿@model BD_26.Models.BloodBank
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/Staff_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BloodBank</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.bank_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bank_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bank_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bank_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bank_phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bank_phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bank_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bank_email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock.Stock_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stock.Stock_name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.bank_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

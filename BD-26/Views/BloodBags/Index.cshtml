@@ -1,0 +1,64 @@
+﻿@model IEnumerable<BD_26.Models.BloodBag>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Staff_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.bloodtype)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BloodBag_Donation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BloodBag_Expiration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BloodBank.bank_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Donor.Fname)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.bloodtype)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BloodBag_Donation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BloodBag_Expiration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BloodBank.bank_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Donor.Fname)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BloodBag_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.BloodBag_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BloodBag_id })
+        </td>
+    </tr>
+}
+
+</table>

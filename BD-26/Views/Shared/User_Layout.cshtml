@@ -1,0 +1,166 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/assets/plugins/OwlCarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/assets/plugins/OwlCarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/assets/css/style-en.css">
+    <title>Blood Bank</title>
+</head>
+<body>
+    <!-- Start Header -->
+    <header>
+        <nav class="top-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-2 padding-sm">
+                        <div class="lang">
+                            <a href="/Home/Index_ar">
+                                <span class="lang-ar">عربى</span>
+                            </a>
+                            <a href="/Home/Index">
+                                <span>EN</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-3 padding-sm">
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-7 pr-0">
+                        <div class="contact">
+                            <div class="contact-message d-inline-block border-right">
+                                <i class="far fa-envelope"></i>
+                                <span class="pr-2">name@name.com</span>
+                            </div>
+                            <div class="contact-phone d-inline-block">
+                                <i class="fas fa-phone-alt"></i>
+                                <span>+966506954964</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-xl navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="/Home/Index">
+                    <img src="/assets/images/logo.png" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item border-right">
+                            <a class="nav-link" href="/Home/Index">Home<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item border-right">
+                            <a class="nav-link" href="/Home/About">About blood bank</a>
+                        </li>
+                        <li class="nav-item border-right">
+                            <a class="nav-link" href="/Home/Article">Articles</a>
+                        </li>
+                        <li class="nav-item border-right">
+                            <a class="nav-link" href="/Donations/Create">Donation Requests</a>
+                        </li>
+                        <li class="nav-item border-right">
+                            <a class="nav-link" href="/Home/About">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Home/Contact">Contact us</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <a href="/Donors/Create">
+                            <button class="btn signup-btn my-2 my-sm-0" type="button">
+                                Sign up
+                            </button>
+                        </a>
+                        <a href="./login-en.html">
+                            <button class="btn login-btn my-2 my-sm-0" type="button">Login</button>
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="about about-bg-color">
+
+            <br><br>
+            <div class="about-box-color">
+                @RenderBody()
+
+        </div>
+    </div>
+
+    <!-- Start footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 footer-info">
+                    <img src="~/assets/images/logo.png" alt="logo">
+                    <h2>Blood Bank</h2>
+                    <p>
+                        It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                        distribution
+                    </p>
+                </div>
+                <div class="col-lg-4 footer-links">
+                    <h3>Main</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="/Home/About"></a> About Blood Bank</li>
+                        <li><a href="/Home/Article">Articles</a></li>
+                        <li><a href="/Donations/Createl">Donation Requests</a></li>
+                        <li><a href="/Home/About">About us</a></li>
+                        <li><a href="/Home/Contact">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 footer-app">
+                    <h3>Available on</h3>
+                    <a href="#"><img src="/assets/images/google1.png" alt="google"></a>
+                    <a href="#"><img src="/assets/images/ios1.png" alt="ios"></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row d-flex align-items-center">
+                    <div class="col-lg-4 social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div class="col-lg-4 copy">
+                        <p>
+                            All rights reserved
+                            <span>Blood Bank</span>
+                            <i class="far fa-copyright"></i>
+                            2019
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+</body>
+</html>

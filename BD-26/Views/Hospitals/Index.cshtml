@@ -1,0 +1,58 @@
+﻿@model IEnumerable<BD_26.Models.Hospital>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Hospital_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Hospital_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hospital_address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hospital_phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hospital_email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hospital_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hospital_address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hospital_phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hospital_email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Hospital_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Hospital_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Hospital_id })
+        </td>
+    </tr>
+}
+
+</table>
