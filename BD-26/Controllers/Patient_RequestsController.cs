@@ -14,7 +14,7 @@ namespace BD_26.Controllers
     public class Patient_RequestsController : Controller
     {
         private DBModels db = new DBModels();
-
+        [Authorize]
         // GET: Patient_Requests
         public ActionResult Index(string sortOrder, string searchString)
         {
